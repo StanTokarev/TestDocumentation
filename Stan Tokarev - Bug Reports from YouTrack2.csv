@@ -1,0 +1,316 @@
+﻿Issue Id;Project;Tags;Summary;Reporter;Created;Updated;Resolved;Priority;Type;State;Assignee;Sprints;Story points;App;Module;Description;Votes
+G9-88;Group 9;;Incorrect error message in Registration block when Registering a new user with invalid username and valid password.;root;16 дек 2024;23 дек 2024;;Medium;Bug;New;Unassigned;Unscheduled;0;Web;Registration;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/login>
+* *Step 2*
+  Action: Input a valid username in the ""Логин"" field. **Input data:** ty
+* *Step 3*
+  Action: Input a valid password in the ""Пароль"" field. **Input data:** qwertyuiop1
+* *Step 4*
+  Action: Click the ""Зарегистрироваться"" button.
+
+### Actual result
+
+Error message: ""Произошла ошибка при обработке запроса"" is appeared in Registration block.
+
+**Expected result:**
+
+Error message: ""Логин должен содержать от 3 до 15 символов и может включать буквы, цифры и символы: _. ""  is appeared in Registration block.
+
+
+
+Qase.io defect: [Registration of a new user with valid data.](https://app.qase.io/defect/G9/view/25)
+Found in test run: [Express run 2024/12/16](https://app.qase.io/run/G9/dashboard/7)";0
+G9-89;Group 9;;Incorrect error message in Registration block when Registering a new user with invalid data.;root;16 дек 2024;17 дек 2024;;Medium;Bug;New;Unassigned;Unscheduled;0;Web;Registration;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/login>
+* *Step 2*
+  Action: Input an invalid username in the ""Логин"" field. **Input data: ab**
+* *Step 3*
+  Action: Input an invalid password in the ""Пароль"" field. **Input data: 12345678**
+* *Step 4*
+  Action: Click the ""Зарегистрироваться"" button.
+
+### Actual result:
+
+Error message: ""Пароль должен содержать не менее 8 символов, включая минимум одну букву и одну цифру"" 
+
+### Expected result:
+
+Error message: ""Логин должен содержать от 3 до 15 символов и может включать буквы, цифры и символы: _. Пароль должен содержать не менее 8 символов, включая минимум одну букву и одну цифру"".
+
+
+
+Qase.io defect: [Registration of a new user with invalid username and password.](https://app.qase.io/defect/G9/view/26)
+Found in test run: [Express run 2024/12/16](https://app.qase.io/run/G9/dashboard/7)";0
+G9-95;Group 9;;Incorrect error message in Registration block when Registering a previously registered user.;root;17 дек 2024;17 дек 2024;;Low;Bug;New;Unassigned;Unscheduled;0;Web;Registration;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/login>
+* *Step 2*
+  Action: Input a previously registered username in the ""Логин"" field. **Input data:** 123
+* *Step 3*
+  Action: Input a previously registered password in the ""Пароль"" field. **Input data:** qwertyuiop1
+* *Step 4*
+  Action: Click the ""Зарегистрироваться"" button
+
+### Actual result
+
+Error message: ""Произошла ошибка при обработке запроса"".
+
+### Expected result
+
+Error message about creating a new account with username that already exists in the system.
+
+
+
+Qase.io defect: [Incorrect error message in Registration block when Registering a previously registered user.](https://app.qase.io/defect/G9/view/34)
+Found in test run: [Express run 2024/12/16](https://app.qase.io/run/G9/dashboard/7)";0
+G9-96;Group 9;;"Incorrect field ""Login"" in ""Вход"" block when the user login process.";root;17 дек 2024;17 дек 2024;;Low;Bug;New;root;Unscheduled;0;Web;Login;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/login>
+* *Step 2*
+  Action: Verify that the ""Вход"" block is on the login page.
+* *Step 3*
+  Action: Verify that the ""Логин"" field in the ""Вход"" block.
+* *Step 4*
+  Action: Verify that the ""Пароль"" field in the ""Вход"" block.
+* *Step 5*
+  Action: Verify that the ""Войти"" button in the ""Вход"" block.
+
+### Actual result
+
+The ""Login"" field is located in the ""Вход"" block.
+
+### Expected result
+
+The ""Логин"" field is located in the ""Вход"" block.
+
+
+
+Qase.io defect: [Incorrect field ""Login"" in ""Вход"" block when the user login process.](https://app.qase.io/defect/G9/view/35)
+Found in test run: [Express run 2024/12/16](https://app.qase.io/run/G9/dashboard/7)";0
+G9-97;Group 9;;"Incorrect field ""Password"" in ""Вход"" block when the user login process.";root;17 дек 2024;17 дек 2024;;Low;Bug;New;Unassigned;Unscheduled;0;Web;Login;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/login>
+* *Step 2*
+  Action: Verify that the ""Вход"" block is on the login page.
+* *Step 3*
+  Action: Verify that the ""Логин"" field in the ""Вход"" block.
+* *Step 4*
+  Action: Verify that the ""Пароль"" field in the ""Вход"" block.
+* *Step 5*
+  Action: Verify that the ""Войти"" button in the ""Вход"" block.
+
+### Actual result
+
+The ""Password"" field is located in the ""Вход"" block.
+
+### Expected result
+
+The ""Пароль"" field is located in the ""Вход"" block.
+
+
+
+Qase.io defect: [Incorrect field ""Password"" in ""Вход"" block when the user login process.](https://app.qase.io/defect/G9/view/36)
+Found in test run: [Express run 2024/12/16](https://app.qase.io/run/G9/dashboard/7)";0
+G9-98;Group 9;;"Incorrect message in ""Вход"" block when the user login process with correct login and incorrect password.";root;17 дек 2024;17 дек 2024;;Low;Bug;New;Unassigned;Unscheduled;0;Web;Login;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/login>
+* *Step 2*
+  Action: Input a correct username in the ""Логин"" field. **Input data:** 456
+* *Step 3*
+  Action: Input a incorrect password in the ""Пароль"" field. **Input data:** 12345678a
+* *Step 4*
+  Action: Click the ""Войти"" button
+
+### Actual result
+
+The error message: ""Произошла ошибка при обработке запроса"".
+
+### Expected result
+
+The error message: ""Неверное имя пользователя или пароль"".
+
+
+
+Qase.io defect: [Incorrect message in ""Вход"" block when the user login process with correct login and incorrect password.](https://app.qase.io/defect/G9/view/37)
+Found in test run: [Express run 2024/12/16](https://app.qase.io/run/G9/dashboard/7)";0
+G9-99;Group 9;;The user is not redirected to the login page when click on link in authorization error message.;root;17 дек 2024;17 дек 2024;;High;Bug;New;Unassigned;Unscheduled;0;Web;Login;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/>
+* *Step 2*
+  Action: Click on the ""Корзина"" or ""Оплата"" or ""История заказов"" buttons in the top menu.
+* *Step 3*
+  Action: Click on link in authorization error message.
+
+### Actual result
+
+The user is redirected to the main page <https://qa.demoshopping.ru/>
+
+### Expected result
+
+The user is redirected to the login page <https://qa.demoshopping.ru/login>
+
+
+
+Qase.io defect: [The user is not redirected to the login page when click on link in authorization error message.](https://app.qase.io/defect/G9/view/38)
+Found in test run: [Express run 2024/12/17](https://app.qase.io/run/G9/dashboard/12)";0
+G9-100;Group 9;;Each page displays an incorrect number of products when the user clicks on the pagination buttons.;root;17 дек 2024;17 дек 2024;;Medium;Bug;New;Unassigned;Unscheduled;0;Web;Catalog;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/>
+* *Step 2*
+  Action: Verify the number of products on the page.
+
+### Actual result
+
+Each page displays 5 products.
+
+### Expected result
+
+Each page displays 6 products.
+
+
+
+Qase.io defect: [Each page displays an incorrect number of products when the user clicks on the pagination buttons.](https://app.qase.io/defect/G9/view/39)
+Found in test run: [Express run 2024/12/17](https://app.qase.io/run/G9/dashboard/13)";0
+G9-240;Group 9;;"No access to the ""Корзина"", ""Оплата"" and ""История заказов"" pages for registered users.";root;22 дек 2024;22 дек 2024;;High;Bug;New;Unassigned;Unscheduled;0;Web;Registration;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Preconditions
+
+The user is not authorized in the system.
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/>
+* *Step 2*
+  Action: Click on the ""Регистрация / Войти"" button in the top menu.
+* *Step 3*
+  Action: Navigate to the ""Регистрация"" block
+* *Step 4*
+  Action: Input a valid username in the ""Логин"" field. **Input data:** 158
+* *Step 5*
+  Action: Input a valid password in the ""Пароль"" field. **Input data:** qwertyuiop1
+* *Step 6*
+  Action: Click on the ""Зарегистрироваться"" button
+* *Step 7*
+  Action: Click on the ""Корзина"" button in the top menu.
+* *Step 8*
+  Action: Click on the ""Оплата"" button in the top menu.
+* *Step 9*
+  Action: Click on the ""История заказов"" button in the top menu.
+
+### Actual result
+
+No access to the ""Корзина"", ""Оплата"" and ""История заказов"" pages for registered users. The user is not authorized after completing the registration process.
+
+### Expected result
+
+Successful access to the ""Корзина"", ""Оплата"" and ""История заказов"" pages for registered users. The user is authorized after completing the registration process.
+
+
+
+Qase.io defect: [No access to the ""Корзина"", ""Оплата"" and ""История заказов"" pages for registered users.](https://app.qase.io/defect/G9/view/172)
+Found in test run: [Express run 2024/12/21](https://app.qase.io/run/G9/dashboard/37)";0
+G9-241;Group 9;;The products on the page are not displayed correctly by price after sorting.;root;22 дек 2024;23 дек 2024;;High;Bug;New;Unassigned;Unscheduled;0;Web;Catalog;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/>
+* *Step 2*
+  Action: Select ""Цена по возрастанию"" from the dropdown in the ""Сортировка"" field.
+* *Step 3*
+  Action: Select ""Цена по убыванию"" from the dropdown in the ""Сортировка"" field.
+
+
+
+
+### Actual result
+
+The products on the page are not displayed correctly by price after sorting from low to high or high to low.
+
+### Expected result
+
+The products on the page are displayed by price after sorting from low to high or high to low.
+
+Qase.io defect: [Sorting the product list by price.](https://app.qase.io/defect/G9/view/173)
+Found in test run: [Express run 2024/12/21](https://app.qase.io/run/G9/dashboard/38)";0
+G9-338;Group 9;;Adding a product to the cart with a quantity of 0 in product card.;root;23 дек 2024;23 дек 2024;;High;Bug;New;Unassigned;Unscheduled;0;Web;Catalog;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### Preconditions
+
+The user is authorized in the system. Reset all filters on the main page.
+
+### Steps to reproduce
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/>
+* *Step 2*
+  Action: Choose any product and enter incorrect data in the spinner. **Spinner**=0.
+
+### Actual result
+
+No error message when adding a product to the cart with a quantity of 0.
+
+### Expected result
+
+Error message when adding a product to the cart with a quantity of 0.
+
+
+
+Qase.io defect: [Adding a product to the cart with a quantity of 0 in product card.](https://app.qase.io/defect/G9/view/254)
+Found in test run: [Express run 2024/12/16](https://app.qase.io/run/G9/dashboard/7)";0
+G9-341;Group 9;;"The ""Войти"" button is not replaced with the ""Выйти"" button after successful registration.";Stan;23 дек 2024;23 дек 2024;;High;Bug;New;Unassigned;Unscheduled;0;Web;Registration;"**Environment:** Windows 11 Enterprise 23H2, Google Chrome 129.0.6668.101
+
+### **Steps to reproduce**
+
+* *Step 1*
+  Action: Go to <https://qa.demoshopping.ru/login>
+* *Step 2*
+  Action: Input a valid username in the ""Логин"" field. **Input data:** 789
+* *Step 3*
+  Action: Input a valid password in the ""Пароль"" field. **Input data:** qwertyuiop1
+* *Step 4*
+  Action: Click the ""Зарегистрироваться"" button
+
+### Actual result
+
+The ""Войти"" button is not replaced with the ""Выйти"" button after successful registration.
+
+**Expected result:**
+
+The ""Войти"" button is replaced with the ""Выйти"" button after successful registration.";0
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;
